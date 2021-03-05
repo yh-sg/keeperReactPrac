@@ -3,18 +3,24 @@ import './Components/Note.jsx'
 import Note from './Components/Note.jsx';
 import Header from './Components/Header.jsx';
 import Footer from './Components/Footer.jsx';
-import notes from './notes.js'
+import CreateArea from './Components/CreateArea.jsx'
+// import notes from './notes.js'
 
 function App() {
   return (
     <div>
       <Header />
-      {notes.map(note=>{
+      <CreateArea />
+      <Note key={1} title="Note title" content="Note content" />
+      {/* {notes.map(note=>{
         return(
-          <Note title={note.title} content={note.content}/>
+          <Note 
+            key={note.key}
+            title={note.title} 
+            content={note.content}
+          />
         )
-      })}
-      
+      })} */}
       <Footer />
     </div>
   );
